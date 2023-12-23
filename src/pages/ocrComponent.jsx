@@ -4,15 +4,13 @@ import Tesseract from "tesseract.js";
 import {
   Box,
   Button,
-  ChakraProvider,
-  Container,
   Heading,
   Text,
   Input,
   VStack,
 } from "@chakra-ui/react";
 
-const OcrComponent = () => {
+const OcrSummarizer = () => {
   const [image, setImage] = useState(null);
   const [text, setText] = useState('');
 
@@ -60,7 +58,7 @@ const OcrComponent = () => {
 
   return (
     <VStack p={5} spacing={4}>
-      <Heading>OCR APP</Heading>
+      <Heading>OCR Summarizer</Heading>
       <Input type="file" accept="image/*" onChange={handleImageChange} />
       <Button onClick={performOCR}>Perform OCR</Button>
       <Box>
@@ -73,5 +71,4 @@ const OcrComponent = () => {
     </VStack>
   );
 }
-
-export default OcrComponent;
+export default OcrSummarizer;
